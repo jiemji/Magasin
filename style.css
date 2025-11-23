@@ -177,7 +177,7 @@ main, section.view {
 /* --- PRODUITS (GRID) --- */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); 
     gap: 15px;
     margin-top: 20px;
     margin-bottom: 60px;
@@ -238,9 +238,9 @@ main, section.view {
 .product-description {
     font-size: 0.85em;
     line-height: 1.3;
-    height: 70px; 
-    overflow-y: auto;
-    flex-grow: 0;
+    height: 90px; 
+    overflow: visible;
+    flex-grow: 1;
     margin-bottom: 10px;
     text-align: left;
     opacity: 0.9;

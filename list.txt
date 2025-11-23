@@ -1,0 +1,34 @@
+ Le volume dans le lecteur C n’a pas de nom.
+ Le numéro de série du volume est CCED-23AE
+
+ Répertoire de C:\Users\jmjou\Desktop\Cyberpunk\PJ\Web\Magasin
+
+20/10/2025  18:52         1 326 806 Console_Apps.png
+20/10/2025  18:52         1 719 397 Console_Console.png
+20/10/2025  18:50           469 404 dos_bleu.png
+20/10/2025  18:50           393 335 dos_orange.png
+20/10/2025  18:50           439 699 dos_vert.png
+20/10/2025  18:50           598 094 dos_violet.png
+20/10/2025  18:51         1 252 048 Gear_Corps.png
+20/10/2025  18:51           518 044 gear_jambes.png
+20/10/2025  18:51         1 754 357 Gear_tête.png
+20/10/2025  18:56         1 764 255 Implant_Bras.png
+20/10/2025  18:55         1 380 363 Implant_Circulation.png
+20/10/2025  18:57         1 882 537 Implant_Defend.png
+20/10/2025  18:55         1 305 364 Implant_Jambes.png
+20/10/2025  18:56         1 425 333 Implant_Main.png
+20/10/2025  18:55           641 119 Implant_Nerf.png
+20/10/2025  18:56         1 831 005 Implant_Sens.png
+20/10/2025  18:56         1 723 000 Implant_Vision.png
+20/10/2025  18:57         1 943 456 Software_Attack.png
+20/10/2025  18:57         1 437 448 Software_Control.png
+20/10/2025  18:57         1 882 537 Software_Defend.png
+20/10/2025  18:53           953 963 Weapon_Bow.png
+20/10/2025  18:54           760 438 Weapon_Handgun.png
+20/10/2025  18:53           973 065 Weapon_heavy.png
+20/10/2025  18:54         1 697 079 Weapon_Katana.png
+20/10/2025  18:52           947 386 Weapon_Module.png
+20/10/2025  18:54           979 823 Weapon_Rifle.png
+20/10/2025  18:53           979 923 Weapon_SMG.png
+              27 fichier(s)       32 979 278 octets
+               0 Rép(s)  33 556 553 728 octets libres
