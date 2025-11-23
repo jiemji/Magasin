@@ -113,6 +113,72 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // --- NOUVELLE FONCTION : Génération de la facture ---
+    function checkout() {
+        // 1. Vérifier si le panier est vide
+        if (Object.keys(cart).length === 0) {
+            showToast("ERREUR: PANIER VIDE");
+            return;
+        }
+
+        // 2. Construction du contenu texte (Format Ticket de caisse / Terminal)
+        const date = new Date().toLocaleString('fr-FR');
+        const separator = "=".repeat(60);
+        const thinSeparator = "-".repeat(60);
+        let grandTotal = 0;
+
+        let invoiceText = `SOLOMART 2000 -- RECU DE TRANSACTION\n`;
+        invoiceText += `${separator}\n`;
+        invoiceText += `DATE  : ${date}\n`;
+        invoiceText += `ID TR : ${Math.random().toString(36).substr(2, 9).toUpperCase()}\n`;
+        invoiceText += `${separator}\n\n`;
+
+        // En-têtes de colonnes (alignés avec padEnd)
+        invoiceText += "ARTICLE".padEnd(35) + "QTE".padEnd(8) + "PRIX U.".padEnd(10) + "TOTAL".padStart(7) + "\n";
+        invoiceText += `${thinSeparator}\n`;
+
+        // Boucle sur les articles
+        Object.values(cart).forEach(item => {
+            const lineTotal = item.Prix * item.quantity;
+            grandTotal += lineTotal;
+
+            // Formatage des chaînes pour l'alignement
+            // On coupe le nom à 33 caractères pour éviter qu'il casse la ligne
+            const name = item.Nom.substring(0, 33).padEnd(35);
+            const qty = ("x" + item.quantity).padEnd(8);
+            const unitPrice = (item.Prix.toFixed(0) + " E").padEnd(10);
+            const totalLine = (lineTotal.toFixed(0) + " E").padStart(7);
+
+            invoiceText += `${name}${qty}${unitPrice}${totalLine}\n`;
+        });
+
+        invoiceText += `${thinSeparator}\n`;
+        invoiceText += `TOTAL A PAYER:`.padEnd(53) + (grandTotal.toFixed(0) + " E").padStart(7) + "\n";
+        invoiceText += `${separator}\n\n`;
+        invoiceText += "MERCI DE VOTRE VISITE, CHOOM.\n";
+        invoiceText += "RESTEZ EN SECURITE DANS LA ZONE DE COMBAT.\n";
+        invoiceText += "\n>> END OF TRANSMISSION";
+
+        // 3. Création et téléchargement du fichier
+        const blob = new Blob([invoiceText], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `SOLOMART_FACTURE_${Date.now()}.txt`;
+        document.body.appendChild(a);
+        a.click();
+        
+        // Nettoyage
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+
+        // 4. Vider le panier après commande
+        cart = {};
+        localStorage.removeItem('cart');
+        renderCart();
+        showToast("COMMANDE TRANSMISE. TÉLÉCHARGEMENT...");
+    }
+
     function renderCart() {
         if (!cartItemsDiv) return;
         cartItemsDiv.innerHTML = '';
@@ -212,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.innerHTML = `
             <h2>${product.Nom}</h2>
             <p class="product-brand">${product.Marque}</p>
-            <p class="product-description">${product.Description}</p>
+            <div class="product-description">${product.Description}</div>
             <p class="product-mode">${product.Mode}</p>
             ${powerHtml}
             <p class="price color-yellow">${parseFloat(product.Prix).toFixed(0)} €</p>
@@ -277,7 +343,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        checkoutBtn.addEventListener('click', () => alert("Fonctionnalité de paiement non implémentée."));
+        // Liaison de la nouvelle fonction checkout
+        checkoutBtn.addEventListener('click', checkout);
         clearCartBtn.addEventListener('click', clearCart);
 
         updateCartCount();
