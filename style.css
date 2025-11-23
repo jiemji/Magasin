@@ -1,0 +1,376 @@
+:root {
+    /* Palette Monochrome stricte */
+    --color-bg: #050505;       /* Noir très profond */
+    --color-amber: #FFB300;    /* Ambre principal */
+    --color-amber-dim: #996B00; /* Ambre sombre pour les éléments secondaires */
+    --color-amber-light: #FFD54F; /* Ambre clair pour le survol */
+    --header-height: 160px; /* On définit la hauteur du header pour l'utiliser plus tard */
+}
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-amber);
+    font-family: 'Cousine', monospace;
+    font-weight: 400;
+    margin: 0;
+    padding-top: var(--header-height); /* Espace pour le header fixe */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Réinitialisation des titres */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cousine', monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    color: var(--color-amber);
+}
+
+/* --- FORCE LE MONOCHROME --- */
+.color-black, .color-white, .color-red, .color-green, 
+.color-blue, .color-cyan, .color-magenta, .color-yellow, .color-amber {
+    color: var(--color-amber) !important;
+}
+
+/* --- HEADER & NAV (maintenant fixes) --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--color-bg);
+    z-index: 1000;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--color-amber-dim);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    letter-spacing: 0.1em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-amber);
+    font-size: 1.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--color-amber-light);
+    border-bottom: 2px solid var(--color-amber);
+    background-color: transparent;
+    text-shadow: 0 0 8px rgba(255, 179, 0, 0.4);
+}
+
+/* --- ZONE DE CONTENU SCROLLABLE --- */
+main, section.view {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.intro-text {
+    font-size: 1.3em;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--color-amber);
+}
+
+/* --- PRODUITS (GRID & CARTE) --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.product-card {
+    border: 1px solid var(--color-amber-dim);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 179, 0, 0.02);
+    transition: border-color 0.3s ease;
+}
+
+.product-card:hover {
+    border-color: var(--color-amber);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: none;
+    filter: grayscale(100%) sepia(100%) hue-rotate(320deg) saturate(500%);
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.product-card:hover img {
+    opacity: 1;
+    filter: none;
+}
+
+.product-card h2 {
+    font-size: 1.6em;
+    margin-bottom: 5px;
+    border-bottom: 1px solid var(--color-amber-dim);
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.product-brand {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.8;
+    margin-bottom: 15px;
+    align-self: flex-start;
+}
+
+.product-description {
+    font-size: 1em;
+    line-height: 1.5;
+    flex-grow: 1;
+    margin-bottom: 20px;
+    text-align: left;
+    opacity: 0.9;
+}
+
+.product-mode {
+    align-self: flex-start;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.product-power {
+    font-size: 0.9em;
+    font-weight: 700;
+    border: 1px solid var(--color-amber-dim);
+    padding: 8px 12px;
+    margin-bottom: 20px;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.price {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    align-self: flex-end;
+}
+
+/* --- BOUTONS --- */
+button {
+    background: transparent;
+    border: 1px solid var(--color-amber);
+    color: var(--color-amber);
+    font-family: 'Cousine', monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--color-amber);
+    color: var(--color-bg);
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    border-width: 2px;
+}
+
+/* --- TITRES CATALOGUE --- */
+.catalogue-title {
+    font-size: 2.5em;
+    border-bottom: 1px solid var(--color-amber);
+    text-align: left;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.type-title {
+    font-size: 1.8em;
+    margin-top: 50px;
+    padding-left: 15px;
+    border-left: 4px solid var(--color-amber);
+    color: var(--color-amber) !important;
+}
+
+/* --- PANIER (MISE EN PAGE REFAITE) --- */
+#cart-view {
+    border: 1px solid var(--color-amber);
+    max-width: 1000px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--color-amber-dim);
+    padding: 20px 0;
+}
+
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border: none;
+    filter: grayscale(100%) sepia(100%) hue-rotate(320deg) saturate(500%);
+    flex-shrink: 0;
+}
+
+.cart-item-details {
+    flex-grow: 1; /* Pousse le reste vers la droite */
+}
+
+.cart-item-details h3 {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.cart-item-price {
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0;
+    width: 80px; /* Largeur fixe pour l'alignement */
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.cart-item-quantity .quantity-text {
+    font-size: 1.1em;
+    font-weight: 700;
+    width: 30px; /* Largeur fixe pour le nombre */
+    text-align: center;
+}
+
+.cart-item-quantity .quantity-btn {
+    background: transparent;
+    border: 1px solid var(--color-amber);
+    color: var(--color-amber);
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-item-line-total {
+    font-size: 1.2em;
+    font-weight: 700;
+    width: 100px; /* Largeur fixe pour l'alignement */
+    text-align: right;
+    flex-shrink: 0;
+}
+
+#cart-summary {
+    border-top: 2px solid var(--color-amber);
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: right;
+}
+
+/* --- FOOTER --- */
+footer {
+    padding: 20px;
+    border-top: 1px solid var(--color-amber-dim);
+    text-align: center;
+    font-size: 0.9em;
+    opacity: 0.7;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    :root {
+        --header-height: 180px;
+    }
+    header h1 { font-size: 2em; }
+    .product-grid { grid-template-columns: 1fr; }
+    
+    .cart-item {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+    }
+    .cart-item-details {
+        flex-basis: calc(100% - 70px); /* Prend toute la largeur moins l'image */
+        order: 1;
+    }
+    .cart-item img {
+        order: 0;
+    }
+    .cart-item-price, .cart-item-quantity, .cart-item-line-total {
+        flex-basis: 30%; /* Divise la ligne du bas en 3 */
+        text-align: center;
+        width: auto;
+        order: 2;
+    }
+    .cart-item-quantity {
+        justify-content: center;
+    }
+
+    #cart-summary { text-align: center; }
+    #cart-summary button { 
+        display: block; 
+        width: 100%; 
+        margin: 10px 0;
+    }
+}
