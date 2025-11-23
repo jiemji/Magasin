@@ -10,19 +10,46 @@ document.addEventListener('DOMContentLoaded', () => {
     let products = []; // Pour stocker tous les produits chargés
     let cart = JSON.parse(localStorage.getItem('cart')) || {}; // Le panier
 
+    // --- Fonction Toast Notification ---
+    function showToast(message) {
+        const container = document.getElementById('toast-container');
+        if (!container) return;
+        
+        const toast = document.createElement('div');
+        toast.classList.add('toast');
+        toast.textContent = `>> SYSTEM: ${message}`;
+        container.appendChild(toast);
+
+        // Supprimer l'élément après l'animation (3 secondes)
+        setTimeout(() => {
+            toast.remove();
+        }, 3000);
+    }
+
     // --- Gestion de la Navigation et des Vues ---
 
     function showView(viewId) {
+        // Cacher toutes les vues
         document.querySelectorAll('.view').forEach(view => {
-            view.style.display = 'none'; // Utilise le style direct pour cacher
+            view.style.display = 'none'; 
         });
+        
+        // Afficher la vue demandée
         const activeView = document.getElementById(viewId);
         if (activeView) {
-            activeView.style.display = 'block'; // Affiche la vue active
+            activeView.style.display = 'block'; 
             if (viewId === 'cart-view') {
                 renderCart(); // Rafraîchir le panier quand on l'affiche
             }
         }
+
+        // Mettre à jour l'état actif du menu
+        navLinks.forEach(link => {
+            link.classList.remove('active-link');
+            if(link.dataset.view === viewId) {
+                link.classList.add('active-link');
+            }
+        });
     }
 
     // --- Fonctions de gestion du Panier ---
@@ -47,7 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             localStorage.setItem('cart', JSON.stringify(cart));
             updateCartCount();
-            console.log(`Produit ajouté : ${product.Nom}`);
+            
+            // Notification visuelle
+            showToast(`${product.Nom} AJOUTÉ AU PANIER`);
         } else {
             console.error(`Produit avec l'ID ${productId} non trouvé.`);
         }
@@ -80,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cart = {};
             localStorage.removeItem('cart');
             renderCart();
+            showToast("PANIER VIDÉ");
         }
     }
 
@@ -94,8 +124,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const cartItemDiv = document.createElement('div');
                 cartItemDiv.classList.add('cart-item');
                 cartItemDiv.dataset.productId = item.id;
+                
+                // Gestion erreur image panier
+                const imgSrc = item.Image;
+                
                 cartItemDiv.innerHTML = `
-                    <img src="${item.Image}" alt="${item.Nom}">
+                    <img src="${imgSrc}" alt="${item.Nom}" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'60\\' height=\\'60\\' viewBox=\\'0 0 60 60\\'><rect width=\\'60\\' height=\\'60\\' fill=\\'transparent\\' stroke=\\'%23FFB300\\' stroke-width=\\'2\\'/></svg>';">
                     <div class="cart-item-details">
                         <h3>${item.Nom}</h3>
                     </div>
@@ -166,8 +200,16 @@ document.addEventListener('DOMContentLoaded', () => {
             powerHtml = `<p class="product-power">${powerLabel}${product.Pouvoir}</p>`;
         }
 
+        // Création de l'image avec gestion d'erreur (fallback SVG)
+        const img = document.createElement('img');
+        img.src = product.Image;
+        img.alt = product.Nom;
+        img.onerror = function() {
+            this.onerror = null;
+            this.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="transparent" stroke="%23FFB300" stroke-width="2"/><text x="50%" y="50%" fill="%23FFB300" dominant-baseline="middle" text-anchor="middle" font-family="monospace">NO IMG</text></svg>';
+        };
+
         card.innerHTML = `
-            <img src="${product.Image}" alt="${product.Nom}">
             <h2>${product.Nom}</h2>
             <p class="product-brand">${product.Marque}</p>
             <p class="product-description">${product.Description}</p>
@@ -176,6 +218,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <p class="price color-yellow">${parseFloat(product.Prix).toFixed(0)} €</p>
             <button class="action-btn add-to-cart-btn color-red" data-product-id="${product.id}">Ajouter au Panier</button>
         `;
+
+        // Insérer l'image au début
+        card.prepend(img);
+
         card.querySelector('.add-to-cart-btn').addEventListener('click', (e) => {
             addToCart(e.target.dataset.productId);
         });
@@ -220,7 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
             renderCataloguePages();
         } else {
             document.querySelectorAll('.catalogue-view').forEach(view => {
-                view.innerHTML = `<p class="color-red">Erreur de chargement des produits. Vérifiez la console.</p>`;
+                view.innerHTML = `<p class="color-red">Erreur de chargement des produits. Vérifiez la console et assurez-vous de lancer via un serveur local.</p>`;
             });
         }
         

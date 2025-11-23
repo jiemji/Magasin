@@ -68,24 +68,24 @@
 67;Modules;Archerie;Modification de l'utilisation;Chargeur-Carquois Automatisé;Uzi;Encochage automatique de la flèche;;2200;Weapon_Module.png
 68;Modules;Archerie;Modification de l'utilisation;"Corde à Amortissement ""Whisper""";Manufacture de;Rend le tir presque totalement silencieux;;800;Weapon_Module.png
 69;Modules;Archerie;Modification de l'utilisation;"Structure Pliable ""Hold-Out""";Dai Lung;Permet de plier l'arc pour la dissimulation;;750;Weapon_Module.png
-70;Modules;Arme de poing;Modification des dégâts;Inferno-Mag I;Federated Arms;Ajoute des munitions à chaleur : inflige 1D6 de dégâts de chaleur additionnels. Réduit l'armure de 1 SP par coup.;;800;Weapon_Module.png
-71;Modules;Arme de poing;Modification des dégâts;Spark-Slug;Militech Arms;Ajoute un dégât électrique mineur (1D6/2). La cible subit un malus de -1 à son prochain jet de Stun Save ;;550;Weapon_Module.png
-72;Modules;Arme de poing;Modification de l'utilisation;Quick-Draw Assist (QDA);Dai Lung;Module assisté pour étui. Confère un bonus de +2 à l'Initiative si l'arme est tirée au premier tour du combat (similaire à l'effet de réflexe des Solos) ;;750;Weapon_Module.png
-73;Modules;Arme de poing;Modification de l'utilisation;Silent-Runner;H&K;Amélioration mécanique interne et ajout de silencieux. L'arme est considérée comme Silent pour les attaques par surprise ou en combat rapproché. sans malus de visée  ;;1100;Weapon_Module.png
-74;Modules;Arme de poing;Modification de l'utilisation;Micro-Stabilizer;BudgetArms;Stabilisateur de poignée pour les tirs rapides. Réduit la pénalité pour Dégainage rapide de -3 à -2 ;;450;Weapon_Module.png
-75;Modules;Arme de poing;Modification de l'utilisation;Smartgun Hijack Inhibitor;Arasaka;Système de contre-mesure pour les armes Smartgun. Ajoute +4 à la difficulté pour les programmes Smartgun Hijack ennemis ;;1500;Weapon_Module.png
-76;Modules;Arme de poing;Modification de la visée;Laser Sight Compact;Militech Electronics;Viseur laser ultra-compact.Ajoute +1 au jet d'Attaque ;;150;Weapon_Module.png
+70;Modules;Arme de poing;Modification des dégâts;Inferno-Mag I;Federated Arms;Ajoute des munitions à chaleur : inflige 1D6 de dégâts de chaleur additionnels. Réduit l'armure de 1 SP par coup.;;800;Weapon_Module.png
+71;Modules;Arme de poing;Modification des dégâts;Spark-Slug;Militech Arms;Ajoute un dégât électrique mineur (1D6/2). La cible subit un malus de -1 à son prochain jet de Stun Save ;;550;Weapon_Module.png
+72;Modules;Arme de poing;Modification de l'utilisation;Quick-Draw Assist (QDA);Dai Lung;Module assisté pour étui. Confère un bonus de +2 à l'Initiative si l'arme est tirée au premier tour du combat (similaire à l'effet de réflexe des Solos) ;;750;Weapon_Module.png
+73;Modules;Arme de poing;Modification de l'utilisation;Silent-Runner;H&K;Amélioration mécanique interne et ajout de silencieux. L'arme est considérée comme Silent pour les attaques par surprise ou en combat rapproché. sans malus de visée  ;;1100;Weapon_Module.png
+74;Modules;Arme de poing;Modification de l'utilisation;Micro-Stabilizer;BudgetArms;Stabilisateur de poignée pour les tirs rapides. Réduit la pénalité pour Dégainage rapide de -3 à -2 ;;450;Weapon_Module.png
+75;Modules;Arme de poing;Modification de l'utilisation;Smartgun Hijack Inhibitor;Arasaka;Système de contre-mesure pour les armes Smartgun. Ajoute +4 à la difficulté pour les programmes Smartgun Hijack ennemis ;;1500;Weapon_Module.png
+76;Modules;Arme de poing;Modification de la visée;Laser Sight Compact;Militech Electronics;Viseur laser ultra-compact.Ajoute +1 au jet d'Attaque ;;150;Weapon_Module.png
 77;Modules;Arme de poing;Modification de la visée;Low-Light Optics;Federated Arms;Ajout d'une optique de visée numérique basse lumière. Permet d'ignorer le malus de -3 à la visée dû à un éclairage insuffisant ;;600;Weapon_Module.png
-78;Modules;Arme de poing;Modification de la visée;Smart-Link Basic;Militech;Convertit l'arme en Smartgun (nécessite Interface Plugs et Neuralware). Donne +2 aux attaques ;;2000;Weapon_Module.png
-79;Modules;Armes lourdes;Modification des dégâts;EMP Overcharger;Militech Electronics;Augmente la puissance des armes à énergie. Le LaserCannon peut être surchargé pour infliger +1D6 de dégâts max (passant à 1-6D6). L'arme s'enraie sur 1-3 (au lieu de 1-2) ;;3000;Weapon_Module.png
-80;Modules;Armes lourdes;Modification des dégâts;Cryo-Payload Link;Divers;Permet de charger des munitions à effet Cryogénique (Zone d'Effet : 2m). Inflige 2D10 dégâts de froid et réduit la Statistique REF des cibles de -1 pour 1D6 tours;;4500;Weapon_Module.png
-81;Modules;Armes lourdes;Modification des dégâts;Napalm Boost V2;Kenshiri Adachi;Améliore le lance-flammes. Les dégâts de feu secondaire durent 4 tours (au lieu de 2) et infligent 1D6 de dégâts par tour ;;2200;Weapon_Module.png
-82;Modules;Armes lourdes;Modification de l'utilisation;Area Effect Limiter;Explosive Tech;Contrôle la dispersion des explosifs ou des grenades. Permet de choisir une zone d'effet réduite de 1 mètre pour concentrer les dégâts (par exemple. 4m au lieu de 5m pour le C6) ;;1000;Weapon_Module.png
-83;Modules;Armes lourdes;Modification de l'utilisation;Cyberlink Auto-Reload;Manufacture de Cyberware;Système de rechargement robotisé pour armes cybernétiques lourdes (MML. Capacitor Laser). Réduit le nombre de tours de rechargement de -1 ;;1500;Weapon_Module.png
+78;Modules;Arme de poing;Modification de la visée;Smart-Link Basic;Militech;Convertit l'arme en Smartgun (nécessite Interface Plugs et Neuralware). Donne +2 aux attaques ;;2000;Weapon_Module.png
+79;Modules;Armes lourdes;Modification des dégâts;EMP Overcharger;Militech Electronics;Augmente la puissance des armes à énergie. Le LaserCannon peut être surchargé pour infliger +1D6 de dégâts max (passant à 1-6D6). L'arme s'enraie sur 1-3 (au lieu de 1-2) ;;3000;Weapon_Module.png
+80;Modules;Armes lourdes;Modification des dégâts;Cryo-Payload Link;Divers;Permet de charger des munitions à effet Cryogénique (Zone d'Effet : 2m). Inflige 2D10 dégâts de froid et réduit la Statistique REF des cibles de -1 pour 1D6 tours;;4500;Weapon_Module.png
+81;Modules;Armes lourdes;Modification des dégâts;Napalm Boost V2;Kenshiri Adachi;Améliore le lance-flammes. Les dégâts de feu secondaire durent 4 tours (au lieu de 2) et infligent 1D6 de dégâts par tour ;;2200;Weapon_Module.png
+82;Modules;Armes lourdes;Modification de l'utilisation;Area Effect Limiter;Explosive Tech;Contrôle la dispersion des explosifs ou des grenades. Permet de choisir une zone d'effet réduite de 1 mètre pour concentrer les dégâts (par exemple. 4m au lieu de 5m pour le C6) ;;1000;Weapon_Module.png
+83;Modules;Armes lourdes;Modification de l'utilisation;Cyberlink Auto-Reload;Manufacture de Cyberware;Système de rechargement robotisé pour armes cybernétiques lourdes (MML. Capacitor Laser). Réduit le nombre de tours de rechargement de -1 ;;1500;Weapon_Module.png
 84;Modules;Armes lourdes;Modification de l'utilisation;EMP Shielding (Anti-Microwave);Militech Electronics;Blindage interne du circuit de l'arme. Immunise l'arme contre les effets secondaires électriques (courts-circuits) des armes à micro-ondes (Microwavers) ;;1800;Weapon_Module.png
-85;Modules;Armes lourdes;Modification de la visée;Targeting Super-Heavy;Barrett-Arasaka;Optique de ciblage balistique de niveau militaire. Ajoute +1 au jet d'Attaque et permet d'ignorer 1 SP de Couverture (Cover SP) de l'ennemi ;;4000;Weapon_Module.png
-86;Modules;Armes lourdes;Modification de la visée;Missile Guidance Lock;Scorpion;Améliore la précision des missiles. Ajoute +1 supplémentaire au WA des missiles autoguidés (total +3 WA pour le micromissile launcher) ;;2500;Weapon_Module.png
-87;Modules;Armes lourdes;Modification de la visée;Smart-Link Heavy;Militech;Liaison Smartgun intégrale pour Canon Laser MilSpec ou 20mm. Donne +2 aux attaques. malgré la taille de l'arme ;;4000;Weapon_Module.png
+85;Modules;Armes lourdes;Modification de la visée;Targeting Super-Heavy;Barrett-Arasaka;Optique de ciblage balistique de niveau militaire. Ajoute +1 au jet d'Attaque et permet d'ignorer 1 SP de Couverture (Cover SP) de l'ennemi ;;4000;Weapon_Module.png
+86;Modules;Armes lourdes;Modification de la visée;Missile Guidance Lock;Scorpion;Améliore la précision des missiles. Ajoute +1 supplémentaire au WA des missiles autoguidés (total +3 WA pour le micromissile launcher) ;;2500;Weapon_Module.png
+87;Modules;Armes lourdes;Modification de la visée;Smart-Link Heavy;Militech;Liaison Smartgun intégrale pour Canon Laser MilSpec ou 20mm. Donne +2 aux attaques. malgré la taille de l'arme ;;4000;Weapon_Module.png
 88;Modules;Corps à corps;Modification des dégâts;Émetteur Volt-Edge;Militech Electronics;Ajoute des dégâts énergétiques au contact;;1200;Weapon_Module.png
 89;Modules;Corps à corps;Modification des dégâts;"Actuateur Cinétique ""Mass-Driver""";Kenshiri Adachi;Augmente exponentiellement la force d'impact;;2800;Weapon_Module.png
 90;Modules;Corps à corps;Modification des dégâts;Lame Mono-Moléculaire;Arasaka;Perfore les blindages légers et moyens;;4000;Weapon_Module.png
@@ -95,24 +95,24 @@
 94;Modules;Corps à corps;Modification de l'utilisation;Poignée Neuro-Tactile;Federated Arms;Améliore la vitesse de maniement et de riposte;;1750;Weapon_Module.png
 95;Modules;Corps à corps;Modification de l'utilisation;"Module ""Pacificateur""";Sternmeyer;Permet de basculer en mode non-létal;;900;Weapon_Module.png
 96;Modules;Corps à corps;Modification de l'utilisation;"Fourreau Magnétique ""Quick-Draw""";BudgetArms;Extraction quasi instantanée de l'arme;;450;Weapon_Module.png
-97;Modules;Fusil;Modification des dégâts;AP-X Enhanced Barrel;FN;Canon à pénétration améliorée. Les munitions Armor Piercing (AP) infligent 3/4 des dégâts normaux au lieu de la moitié (tout en conservant la moitié de l'armure SP) ;;1800;Weapon_Module.png
-98;Modules;Fusil;Modification des dégâts;Flame-Coating Rounds;Kenshiri Adachi;Revêtement qui s'enflamme à l'impact. Inflige 2D6 dégâts de feu au premier tour. puis 1D6/2 le tour suivant;;1200;Weapon_Module.png
-99;Modules;Fusil;Modification de l'utilisation;Recoil Compensator Heavy;Militech;Compensateur de recul lourd. Réduit la pénalité pour le tir en Full Auto à -0 (au lieu de -1 par 10 cartouches) ;;2500;Weapon_Module.png
-100;Modules;Fusil;Modification de l'utilisation;Vehicle Link Integrator;FN;Permet de connecter le fusil à un Vehicle Link. Ajoute +1 supplémentaire aux jets d'Attaque si le porteur est connecté à un véhicule Cyber (total +3)  ;;1400;Weapon_Module.png
-101;Modules;Fusil;Modification de l'utilisation;Jury-Rig Assist;Divers;Module de diagnostic rapide Ajoute un bonus de +2 au jet de Basic Tech pour débloquer l'arme si elle s'enraye ;;300;Weapon_Module.png
-102;Modules;Fusil;Modification de la visée;Telescopic Scope Pro (x10);Fabrica De Armes;Viseur télescopique à haute résolution. Ajoute +3 aux attaques à longue portée (Long) et +1 aux attaques à moyenne portée (Medium) ;;1600;Weapon_Module.png
-103;Modules;Fusil;Modification de la visée;Targeting Smart-Integration;Arasaka;Module optique Smartgun qui ajoute +2 aux attaques Smartgun si l'arme est équipée d'une Liaison Smartgun (cumulable avec le +2 Smartgun Link pour un max de +4) ;;1000;Weapon_Module.png
+97;Modules;Fusil;Modification des dégâts;AP-X Enhanced Barrel;FN;Canon à pénétration améliorée. Les munitions Armor Piercing (AP) infligent 3/4 des dégâts normaux au lieu de la moitié (tout en conservant la moitié de l'armure SP) ;;1800;Weapon_Module.png
+98;Modules;Fusil;Modification des dégâts;Flame-Coating Rounds;Kenshiri Adachi;Revêtement qui s'enflamme à l'impact. Inflige 2D6 dégâts de feu au premier tour. puis 1D6/2 le tour suivant;;1200;Weapon_Module.png
+99;Modules;Fusil;Modification de l'utilisation;Recoil Compensator Heavy;Militech;Compensateur de recul lourd. Réduit la pénalité pour le tir en Full Auto à -0 (au lieu de -1 par 10 cartouches) ;;2500;Weapon_Module.png
+100;Modules;Fusil;Modification de l'utilisation;Vehicle Link Integrator;FN;Permet de connecter le fusil à un Vehicle Link. Ajoute +1 supplémentaire aux jets d'Attaque si le porteur est connecté à un véhicule Cyber (total +3)  ;;1400;Weapon_Module.png
+101;Modules;Fusil;Modification de l'utilisation;Jury-Rig Assist;Divers;Module de diagnostic rapide Ajoute un bonus de +2 au jet de Basic Tech pour débloquer l'arme si elle s'enraye ;;300;Weapon_Module.png
+102;Modules;Fusil;Modification de la visée;Telescopic Scope Pro (x10);Fabrica De Armes;Viseur télescopique à haute résolution. Ajoute +3 aux attaques à longue portée (Long) et +1 aux attaques à moyenne portée (Medium) ;;1600;Weapon_Module.png
+103;Modules;Fusil;Modification de la visée;Targeting Smart-Integration;Arasaka;Module optique Smartgun qui ajoute +2 aux attaques Smartgun si l'arme est équipée d'une Liaison Smartgun (cumulable avec le +2 Smartgun Link pour un max de +4) ;;1000;Weapon_Module.png
 104;Modules;Fusil;Modification de la visée;Image Enhancer Link;Militech;Lien avec les Cyberoptiques pour améliorer la résolution. Réduit le malus de visée de -2 dû à l'obscurité ou aux intempéries ;;950;Weapon_Module.png
 105;Modules;Fusil;Modification de la visée;Rangefinder Digital;Divers;Télémètre numérique. Indique la portée précise. réduisant la difficulté de visée d'un cran si l'arme est à portée Close ou Medium ;;700;Weapon_Module.png
-106;Modules;Mitraillette;Modification des dégâts;Taser-Burst Rounds;H&K;Munitions non létales électriques. Remplace le dégât par une décharge Stun plus puissante. nécessitant un Stun Save à -3 (au lieu de -1 ou -2) ;;700;Weapon_Module.png
-107;Modules;Mitraillette;Modification des dégâts;Acid Injector;Enertex;Injecteur de produits chimiques. Chaque coup inflige 1D6 de dégâts additionnels par acide (Type A) et réduit l'armure de 1 SP par coup  ;;1500;Weapon_Module.png
-108;Modules;Mitraillette;Modification de l'utilisation;Burst-Fire Accelerator;Uzi;Augmente la cadence de tir en rafale. Le Three Round Burst inflige un bonus de +4 (au lieu de +3) ;;1200;Weapon_Module.png
+106;Modules;Mitraillette;Modification des dégâts;Taser-Burst Rounds;H&K;Munitions non létales électriques. Remplace le dégât par une décharge Stun plus puissante. nécessitant un Stun Save à -3 (au lieu de -1 ou -2) ;;700;Weapon_Module.png
+107;Modules;Mitraillette;Modification des dégâts;Acid Injector;Enertex;Injecteur de produits chimiques. Chaque coup inflige 1D6 de dégâts additionnels par acide (Type A) et réduit l'armure de 1 SP par coup  ;;1500;Weapon_Module.png
+108;Modules;Mitraillette;Modification de l'utilisation;Burst-Fire Accelerator;Uzi;Augmente la cadence de tir en rafale. Le Three Round Burst inflige un bonus de +4 (au lieu de +3) ;;1200;Weapon_Module.png
 109;Modules;Mitraillette;Modification de l'utilisation;Ammo Counter Display;Arasaka;Affichage numérique du nombre de munitions restantes. Donne +1 au jet d'Initiative;;350;Weapon_Module.png
-110;Modules;Mitraillette;Modification de l'utilisation;Flash-Suppressor Stealth;H&K;Cache-flammes à haute efficacité. Malus de -3 aux jets de Perspicacité pour identifier le tireur (si l'arme tire en rafale) ;;500;Weapon_Module.png
-111;Modules;Mitraillette;Modification de l'utilisation;Myomar Grip Enhance;Manufacture de Cyberware;Poignée assistée par des fibres myomar (similaire au T-Myo des cyberbras. Réduit le malus de -3 pour tirer en courant à -2  ;;950;Weapon_Module.png
+110;Modules;Mitraillette;Modification de l'utilisation;Flash-Suppressor Stealth;H&K;Cache-flammes à haute efficacité. Malus de -3 aux jets de Perspicacité pour identifier le tireur (si l'arme tire en rafale) ;;500;Weapon_Module.png
+111;Modules;Mitraillette;Modification de l'utilisation;Myomar Grip Enhance;Manufacture de Cyberware;Poignée assistée par des fibres myomar (similaire au T-Myo des cyberbras. Réduit le malus de -3 pour tirer en courant à -2  ;;950;Weapon_Module.png
 112;Modules;Mitraillette;Modification de la visée;Smartgun Link Compact;Uzi;Liaison Smartgun installée en usine sur l'Uzi Miniauto. Optimisé pour la cadence de tir ;;1800;Weapon_Module.png
 113;Modules;Mitraillette;Modification de la visée;Holosight IR;Arasaka;Viseur holographique avec capacité infrarouge. Annule les malus dus à l'obscurité ou à la faible luminosité ;;1050;Weapon_Module.png
-114;Modules;Mitraillette;Modification de la visée;Close-Quarters Targeting;Sternmeyer;Système de ciblage assisté pour combat rapproché. Donne +1 supplémentaire (total +5) pour les attaques à Point Blank (0-1m) ;;650;Weapon_Module.png
+114;Modules;Mitraillette;Modification de la visée;Close-Quarters Targeting;Sternmeyer;Système de ciblage assisté pour combat rapproché. Donne +1 supplémentaire (total +5) pour les attaques à Point Blank (0-1m) ;;650;Weapon_Module.png
 115;Vetements;Bas;SP 2;Genouillères/Coudières Rouillées;Divers (Récupération);Protections rigides qui gênent le mouvement en émettant un grincement.; Inconvénient : Malus de -1 au jet de Discrétion.;30;gear_jambes.png
 116;Vetements;Bas;SP 3;Jambières Époxydées;Federated Arms;Jambières de protection souvent peintes grossièrement.;Protègent les membres contre les dégâts contondants Inconvénient : Réduit l'Attractivité (ATTR) de -110.;40;gear_jambes.png
 117;Vetements;Bas;SP 2;"Pantalons Armurés ""Heavy Leather""";Divers;Pantalons épais en cuir lourd. souvent customisés par des gangs.;Fournit une Protection Balistique aux jambes. suffisante contre les couteaux ou les éraflures (road rash).;50;gear_jambes.png
@@ -204,18 +204,18 @@
 203;Vetements;Tête;SP 1;Casque de Pilote AV-7;Orbital Air;Casque de pilote en composite de vol vectored-thrust (AV-7)16 avec interface de contrôle direct et radio cryptée.;Ajoute un bonus de +3 aux jets de compétence Propulsion et +1 à l'Initiative pendant le pilotage (via un lien neuronal);5000;Gear_tête.png
 204;Vetements;Tête;SP 0;"Smartgoggles ""Optic Master""";Militech;Lunettes optiques haut de gamme simulant 4 options Cyberoptiques. avec un processeur de ciblage avancé.;Fournit 4 options de cyberoptiquesFournit un Smartgun Plug et un bonus de +3 aux attaques à distance (cumulable jusqu'à +5 avec un Smartgun Link Cyberware);6000;Gear_tête.png
 205;Implants;Sens (Odorat/Écoute);;Cyberaudio Standard;Orbital Air;Remplacement standard du système auditif. sans option initiale. Permet l'ajout d'options d'amélioration du son ;2D6 ;500;Implant_Sens.png
-206;Implants;Sens (Odorat/Écoute);;Ampli-Hear Pro;Militech;Améliore l'ouïe et la reconnaissance sonore. ajoutant un bonus de +1 à tous les tests d'Perspicacité basés sur le son ;0.5 ;100;Implant_Sens.png
-207;Implants;Sens (Odorat/Écoute);;Olfactory Boost (O-Boost);Divers (licence);Amplifie l'odorat. ajoutant +2 aux jets d'Perspicacité basés sur l'odeur. Permet également un bonus de +2 pour le pistage par l'odeur (Traque);2D6 ;400;Implant_Sens.png
+206;Implants;Sens (Odorat/Écoute);;Ampli-Hear Pro;Militech;Améliore l'ouïe et la reconnaissance sonore. ajoutant un bonus de +1 à tous les tests d'Perspicacité basés sur le son ;0.5 ;100;Implant_Sens.png
+207;Implants;Sens (Odorat/Écoute);;Olfactory Boost (O-Boost);Divers (licence);Amplifie l'odorat. ajoutant +2 aux jets d'Perspicacité basés sur l'odeur. Permet également un bonus de +2 pour le pistage par l'odeur (Traque);2D6 ;400;Implant_Sens.png
 208;Implants;Sens (Odorat/Écoute);;Level Damper (LD-Sound);Divers;Compensation automatique pour les bruits intenses. permettant d'ignorer les effets des armes soniques ou des grenades assourdissantes ;0.5 ;300;Implant_Sens.png
-209;Implants;Sens (Odorat/Écoute);;Vocal-Synth 'Vox;Petrochem (Rebut);Synthétiseur vocal qui permet de contrôler la tonalité. le volume et la qualité de la voix avec précision. Ajoute +2 aux tests de compétence Performance vocale ;2D6 ;700;Implant_Sens.png
+209;Implants;Sens (Odorat/Écoute);;Vocal-Synth 'Vox;Petrochem (Rebut);Synthétiseur vocal qui permet de contrôler la tonalité. le volume et la qualité de la voix avec précision. Ajoute +2 aux tests de compétence Performance vocale ;2D6 ;700;Implant_Sens.png
 210;Implants;Sens (Odorat/Écoute);;Micro-Rec Link;Zetatech (Modèle Ancien);Permet d'enregistrer l'audio via des microphones internes et de stocker 2 heures de données (si couplé à un enregistreur Audio/Vidéo) ;0.5 ;300;Implant_Sens.png
-211;Implants;Sens (Odorat/Écoute);;Bug Detector Mk. II;Orbital Air;Mini-récepteur qui détecte les signaux des dispositifs d'écoute radio. Confère 6/10 chance de détecter les bugs dans un rayon de 10 pieds ;0.5 ;100;Implant_Sens.png
-212;Implants;Sens (Odorat/Écoute);;Voice Stress Analyzer (VSA);Divers;Système de détection de mensonges. Ajoute +2 aux tests de Perception Humaine ou Interrogation pour un sujet donné. après un enregistrement initial ;0.5 ;200;Implant_Sens.png
+211;Implants;Sens (Odorat/Écoute);;Bug Detector Mk. II;Orbital Air;Mini-récepteur qui détecte les signaux des dispositifs d'écoute radio. Confère 6/10 chance de détecter les bugs dans un rayon de 10 pieds ;0.5 ;100;Implant_Sens.png
+212;Implants;Sens (Odorat/Écoute);;Voice Stress Analyzer (VSA);Divers;Système de détection de mensonges. Ajoute +2 aux tests de Perception Humaine ou Interrogation pour un sujet donné. après un enregistrement initial ;0.5 ;200;Implant_Sens.png
 213;Implants;Sens (Odorat/Écoute);;ECM Scrambler;BudgetArms;Améliore le Radio Link ou Audio Splice en brouillant la communication. rendant les transmissions privées à moins que l'intercepteur n'ait un descrambleur ;0.5 ;100;Implant_Sens.png
 214;Implants;Sens (Odorat/Écoute);;Digital Record Link;Dai Lung (Contrefaçon);Permet d'enregistrer l'audio ou la vidéo vers la mémoire interne du cyberaudio ;0.5 ;300;Implant_Sens.png
 215;Implants;Vision;;Cyberoptique Standard;Biotechnica (Déclassée);Remplacement complet des yeux. Base pour l'ajout d'options ;3D6 ;200;Implant_Vision.png
-216;Implants;Vision;;Image Enhancement (IE);Arasaka;Amélioration graphique haute résolution des images vues. Ajoute +2 à la compétence Perspicacité pour les indices visuels ;0.5 ;300;Implant_Vision.png
-217;Implants;Vision;;Targeting Scope (TS);Exotic Fashion (Usé);Projette un réticule de ciblage dans le champ de vision. Ajoute +1 aux attaques Smartgun ;0.5 ;300;Implant_Vision.png
+216;Implants;Vision;;Image Enhancement (IE);Arasaka;Amélioration graphique haute résolution des images vues. Ajoute +2 à la compétence Perspicacité pour les indices visuels ;0.5 ;300;Implant_Vision.png
+217;Implants;Vision;;Targeting Scope (TS);Exotic Fashion (Usé);Projette un réticule de ciblage dans le champ de vision. Ajoute +1 aux attaques Smartgun ;0.5 ;300;Implant_Vision.png
 218;Implants;Vision;;Infrared (IR-Sight);Contrefaçon Rue;Permet de voir dans l'obscurité totale en utilisant les émissions de chaleur ;0.5 ;100;Implant_Vision.png
 219;Implants;Vision;;Low-Lite™;Divers;Permet à l'utilisateur de voir clairement dans des conditions de faible éclairage ;0.5 ;100;Implant_Vision.png
 220;Implants;Vision;;Teleoptics (Zoom x20);FN;Équivalent à un télescope de puissance 20x ;0.5 ;200;Implant_Vision.png
@@ -224,37 +224,37 @@
 223;Implants;Vision;;Color Shift Iris;Trauma Team;Permet de changer la couleur ou le motif de l'iris sur commande. pour des raisons esthétiques ;1D6/2 ;200;Implant_Vision.png
 224;Implants;Vision;;Retina-Cam Digital;Zetatech (Prototype);Caméra numérique montée dans l'œil (prend 2 espaces d'option). Stocke jusqu'à 20 images sur une puce intégrée ;0.5 ;300;Implant_Vision.png
 225;Implants;Bras;;Cyberarm Standard (CA);Militech;Remplacement standard d'un bras. équipé de muscles myomar. Possède 4 espaces pour options ou armes intégrées ;2D6 ;3000;Implant_Bras.png
-226;Implants;Bras;;Plaque d'Armure ;Petrochem;Revêtement d'armure balistique pour le cybermembre. SP 5 pour le bras ;2;500;Implant_Bras.png
-227;Implants;Bras;;Thickened Myomar (T-Myo);DiscrétionNet (via un Fixer);Fibres myomar épaissies. augmentant la force (double les dégâts de coup de poing/écrasement) ;3;600;Implant_Bras.png
-228;Implants;Bras;;Hydraulic Rams (H-Rams);Zetatech;Composants lourds augmentant la force (triple les dégâts de coup de poing/écrasement) ;3;900;Implant_Bras.png
+226;Implants;Bras;;Plaque d'Armure ;Petrochem;Revêtement d'armure balistique pour le cybermembre. SP 5 pour le bras ;2;500;Implant_Bras.png
+227;Implants;Bras;;Thickened Myomar (T-Myo);DiscrétionNet (via un Fixer);Fibres myomar épaissies. augmentant la force (double les dégâts de coup de poing/écrasement) ;3;600;Implant_Bras.png
+228;Implants;Bras;;Hydraulic Rams (H-Rams);Zetatech;Composants lourds augmentant la force (triple les dégâts de coup de poing/écrasement) ;3;900;Implant_Bras.png
 229;Implants;Bras;;Quick-Change Mount;Militech;Permet de changer rapidement de cybermembre (poignet. coude ou épaule) sans outils ;2;400;Implant_Bras.png
-230;Implants;Bras;;Realskinn™;Zetatech;"Revêtement plastique flexible qui imite la peau humaine. 75 % de chance de se faire passer pour de la ""viande"" ";1D6 ;100;Implant_Bras.png
+230;Implants;Bras;;Realskinn™;Zetatech;"Revêtement plastique flexible qui imite la peau humaine. 75 % de chance de se faire passer pour de la ""viande"" ";1D6 ;100;Implant_Bras.png
 231;Implants;Bras;;Popup .45 Pistol (LMP);Arasaka / Si-fui Yan;Arme de poing dissimulée dans le cyberbras ;1D6/2 ;350;Implant_Bras.png
 232;Implants;Bras;;Storage Space (2x2x6);Biotechnica;Compartiment de stockage verrouillable dissimulé dans le cyberbras.;0.5;100;Implant_Bras.png
 233;Implants;Bras;;Capacitor Laser (2-Shot);Zetatech;Micro-laser à impulsion puissante (3D6 dégâts) dissimulé ;2D6 ;800;Implant_Bras.png
 234;Implants;Bras;;Micromissile Launcher (MML);DiscrétionNet;Lanceur dissimulé de quatre missiles miniatures autoguidés ;2D6 ;500;Implant_Bras.png
 235;Implants;Main;;Ripper Hand;Anne Calvin;Main standard avec lames ripper dissimulées (1D6+3 dégâts) ;2D6 ;200;Implant_Main.png
-236;Implants;Main;;Hammer Hand;Militech;Main en titane trempé avec un vérin explosif. Le coup de poing inflige 1D10 dégâts ;2D6 ;300;Implant_Main.png
-237;Implants;Main;;Buzz Hand (Mono-Saw);Trauma Team;Mono-filaments rotatifs à grande vitesse. 2D6+2 dégâts. réduction d'armure souple ;3;500;Implant_Main.png
+236;Implants;Main;;Hammer Hand;Militech;Main en titane trempé avec un vérin explosif. Le coup de poing inflige 1D10 dégâts ;2D6 ;300;Implant_Main.png
+237;Implants;Main;;Buzz Hand (Mono-Saw);Trauma Team;Mono-filaments rotatifs à grande vitesse. 2D6+2 dégâts. réduction d'armure souple ;3;500;Implant_Main.png
 238;Implants;Main;;Tool Hand (Multi-Tool);Arasaka (R&D);Main dont les quatre doigts dissimulent des micro-outils ;2;300;Implant_Main.png
 239;Implants;Main;;Grapple Hand (Grip);Dai Lung;Main dont les doigts se prolongent en un grappin de lancer. Contient 30 mètres de ligne ;2;200;Implant_Main.png
 240;Implants;Main;;Extension Hand (Extendo);Exotic Fashion;Main qui peut s'étendre jusqu'à 1 mètre ;2;200;Implant_Main.png
-241;Implants;Main;;Big Knucks (Knucklebone);Exotic Fashion;Os des phalanges renforcés. valeur d'impact de 1D6+2 dégâts (Black Market) ;1D6 ;100;Implant_Main.png
+241;Implants;Main;;Big Knucks (Knucklebone);Exotic Fashion;Os des phalanges renforcés. valeur d'impact de 1D6+2 dégâts (Black Market) ;1D6 ;100;Implant_Main.png
 242;Implants;Main;;Scratchers (Carbo-Claws);Divers;Ongles implantés en métal ou carbo-glas. extrêmement coupants (1D6/2 dégâts) ;1D6/2 ;100;Implant_Main.png
 243;Implants;Main;;Wolver Blades;Biotechnica;Lames d'implant les plus longues. Se déploient sur 30 cm (3D6 dégâts/main) ;2D6 ;500;Implant_Main.png
 244;Implants;Main;;Slice N' Dice;Militech (Rebut);Bobine de mono-filament installée dans l'extrémité d'un doigt ;2D6 ;300;Implant_Main.png
 245;Implants;Jambes;;Cyberleg Standard (CL);Divers (Imitation);Remplacement standard d'une jambe. Comprend 3 espaces pour options/armes ;2D6 ;2000;Implant_Jambes.png
 246;Implants;Jambes;;T-Myo Leaper;Militech (Reconditionné);Augmentation de la musculature Thickened Myomar. Les sauts sont augmentés de 50 % ;3;600;Implant_Jambes.png
-247;Implants;Jambes;;Joints Renforcés;Militech;Articulations en acier au titane. Ajoute +5 SP au cybermembre ;1;600;Implant_Jambes.png
+247;Implants;Jambes;;Joints Renforcés;Militech;Articulations en acier au titane. Ajoute +5 SP au cybermembre ;1;600;Implant_Jambes.png
 248;Implants;Jambes;;Spike Heel Foot;Militech;Talon avec une pointe de 15 cm projetant à partir du talon (2D6 dégâts AP) ;1D6 ;500;Implant_Jambes.png
-249;Implants;Jambes;;Web Foot;Orbital Air;Déploie des membranes minces entre les orteils et les côtés du pied. Double la vitesse de nage ;1;200;Implant_Jambes.png
-250;Implants;Jambes;;Grip Foot (Adhérence);Militech;Les orteils peuvent s'enrouler autour d'une barre de 5 cm. Ajoute +2 aux compétences d'Escalade ;1;200;Implant_Jambes.png
+249;Implants;Jambes;;Web Foot;Orbital Air;Déploie des membranes minces entre les orteils et les côtés du pied. Double la vitesse de nage ;1;200;Implant_Jambes.png
+250;Implants;Jambes;;Grip Foot (Adhérence);Militech;Les orteils peuvent s'enrouler autour d'une barre de 5 cm. Ajoute +2 aux compétences d'Escalade ;1;200;Implant_Jambes.png
 251;Implants;Jambes;;Holster Dissimulé;Divers (licence);Espace de stockage caché dans la jambe. pouvant contenir un pistolet automatique ;0.5 ;400;Implant_Jambes.png
 252;Implants;Jambes;;Talon Foot (Claws);Divers;Déploie des lames étroites similaires aux Scratchers depuis le pied (1D6 dégâts) ;1D6 ;200;Implant_Jambes.png
 253;Implants;Jambes;;Quick-Change Ankle;Petrochem (Rebut);Permet le changement rapide des pieds au niveau de la cheville sans outil ;2;200;Implant_Jambes.png
-254;Implants;Jambes;;Jumping Servo-Pistons;Zetatech (Modèle Ancien);Pistons puissants et micro-servos intégrés. Permet de sauter jusqu'à 6 mètres en ligne droite (deux cyberjambes requises) ;3;800;Implant_Jambes.png
-255;Implants;Peau;;Subdermal Armor (SDA);Orbital Air;Maille/armure balistique insérée sous la peau. couvrant le torse seulement. Fournit SP 3;2D6 ;2000;Implant_Defend.png
-256;Implants;Peau;;Skin Weave;Orbital Air;Nanoids qui tissent les trois premières couches de peau avec un polymère dense. Fournit un SP de 2 pour la peau nue ;2D6;3500;Implant_Defend.png
+254;Implants;Jambes;;Jumping Servo-Pistons;Zetatech (Modèle Ancien);Pistons puissants et micro-servos intégrés. Permet de sauter jusqu'à 6 mètres en ligne droite (deux cyberjambes requises) ;3;800;Implant_Jambes.png
+255;Implants;Peau;;Subdermal Armor (SDA);Orbital Air;Maille/armure balistique insérée sous la peau. couvrant le torse seulement. Fournit SP 3;2D6 ;2000;Implant_Defend.png
+256;Implants;Peau;;Skin Weave;Orbital Air;Nanoids qui tissent les trois premières couches de peau avec un polymère dense. Fournit un SP de 2 pour la peau nue ;2D6;3500;Implant_Defend.png
 257;Implants;Peau;;Light Tattoos (L-Tat);BudgetArms;Patches chimiques émettant de la lumière. insérés sous la peau ;1D6/2 ;200;Implant_Defend.png
 258;Implants;Peau;;Chem Skins (C-Skin);Dai Lung (Contrefaçon);Colorants et produits chimiques imprégnés dans la peau. qui peuvent changer la couleur de la peau ou alterner des motifs vibrants ;1D6/2 ;400;Implant_Defend.png
 259;Implants;Peau;;Synthskins Pro;Biotechnica (Déclassée);Couche de plastique à changement de couleur liée à la peau. Peut afficher des couleurs. des motifs. ou des fusées de lumière ;1D6/2 ;800;Implant_Defend.png
@@ -262,24 +262,24 @@
 261;Implants;Peau;;Skinwatch;Exotic Fashion (Usé);Montre numérique implantée juste sous l'épiderme ;1D6/2 ;200;Implant_Defend.png
 262;Implants;Peau;;Shift-tacts;Contrefaçon Rue;Lentilles de contact colorées pour imiter les cyberoptiques ;1D6/2 ;50;Implant_Defend.png
 263;Implants;Peau;;Subdermal Pocket (PKT);Divers;Poche plastique dissimulée sous la peau avec une fermeture scellée ;2D6 ;100;Implant_Defend.png
-264;Implants;Peau;;Cowl Plate;FN;Plaque d'armure couvrant le crâne (ancrée par mini-boulons au cuir chevelu). SP 6 ;3D6 ;400;Implant_Defend.png
+264;Implants;Peau;;Cowl Plate;FN;Plaque d'armure couvrant le crâne (ancrée par mini-boulons au cuir chevelu). SP 6 ;3D6 ;400;Implant_Defend.png
 265;Implants;Système Nerveux;;Neural Processor;Si-fui Yan (Haute Couture);Boîte de commutation implantée dans la colonne vertébrale inférieure. système principal pour toute interface neurale ;2D6 ;1000;Implant_Nerf.png
-266;Implants;Système Nerveux;;Kerenzikov (+1 REF);Militech;Co-processeur amplifiant la vitesse de réaction. Ajoute +1 à l'Initiative et aux Réflexes (REF) en permanence ;1D6 ;1000;Implant_Nerf.png
-267;Implants;Système Nerveux;;Speedware (Sandevistan);Trauma Team;Booster qui s'active sur commande. augmentant les jets d'Initiative de +3 pour cinq tours ;2D6 ;1200;Implant_Nerf.png
+266;Implants;Système Nerveux;;Kerenzikov (+1 REF);Militech;Co-processeur amplifiant la vitesse de réaction. Ajoute +1 à l'Initiative et aux Réflexes (REF) en permanence ;1D6 ;1000;Implant_Nerf.png
+267;Implants;Système Nerveux;;Speedware (Sandevistan);Trauma Team;Booster qui s'active sur commande. augmentant les jets d'Initiative de +3 pour cinq tours ;2D6 ;1200;Implant_Nerf.png
 268;Implants;Système Nerveux;;Pain Editor;Zetatech (Prototype);Co-processeur qui neutralise les récepteurs de douleur du cerveau. rendant le sujet insensible à la douleur physique ;2D6 ;1200;Implant_Nerf.png
 269;Implants;Système Nerveux;;Interface Plugs (Fiches);Militech;Prises (habituellement dans les poignets. la colonne ou le crâne) qui se connectent au Neural Processor. Essentiel pour les Netrunners ;2D6 ;1000;Implant_Nerf.png
-270;Implants;Système Nerveux;;Smartgun Link (S-Link);Petrochem;Permet de relier mentalement une arme à feu modifiée (Smartgun) au système nerveux. Ajoute +2 aux attaques avec cette arme ;2D6 ;1000;Implant_Nerf.png
-271;Implants;Système Nerveux;;Vehicle Link (V-Link);DiscrétionNet (via un Fixer);Permet le contrôle direct d'un cybervéhicule par la pensée. offrant un bonus automatique de +2 aux compétences de conduite/pilotage ;2D6 ;1000;Implant_Nerf.png
+270;Implants;Système Nerveux;;Smartgun Link (S-Link);Petrochem;Permet de relier mentalement une arme à feu modifiée (Smartgun) au système nerveux. Ajoute +2 aux attaques avec cette arme ;2D6 ;1000;Implant_Nerf.png
+271;Implants;Système Nerveux;;Vehicle Link (V-Link);DiscrétionNet (via un Fixer);Permet le contrôle direct d'un cybervéhicule par la pensée. offrant un bonus automatique de +2 aux compétences de conduite/pilotage ;2D6 ;1000;Implant_Nerf.png
 272;Implants;Système Nerveux;;Machine/Tech Link;Zetatech;Permet d'interfacer avec et de contrôler toute autofactory ou machine lourde ;2D6 ;1000;Implant_Nerf.png
-273;Implants;Système Nerveux;;Chipware Socket (10 puces);Militech;Petite douille pour insérer jusqu'à 10 puces de compétence (APTR ou MRAM) ;2D6 ;500;Implant_Nerf.png
-274;Implants;Système Nerveux;;Adrenal Booster (ADS);Zetatech;Glande artificielle qui libère des hormones adrénalines sur commande. ajoutant +1 aux Réflexes (REF) ;2D6 ;500;Implant_Nerf.png
-275;Implants;Système Circulatoire;;Nanosurgeons (NSR);Arasaka / Si-fui Yan;Machines microscopiques injectées qui effectuent des réparations chirurgicales au niveau cellulaire. Double le taux de guérison normal ;1D6/2 ;6000;Implant_Circulation.png
-276;Implants;Système Circulatoire;;Muscle & Bone Lace (M&BL);Biotechnica;Nanoids qui enfilent des muscles synthétiques et enveloppent les os. Augmente la Puissance de +2 ;2D6 ;3000;Implant_Circulation.png
-277;Implants;Système Circulatoire;;Grafted Muscle (GM);Zetatech;Muscle cultivé en cuve greffé. Augmente la statistique Puissance jusqu'à 2 points (1000 eb par point) ;1D6 par point de PUISSANCE gagné;;Implant_Circulation.png
-278;Implants;Système Circulatoire;;Enhanced Antibodies (EA);DiscrétionNet;Anticorps sur mesure qui attaquent les toxines et les virus. Double le taux de guérison (en plus du taux normal) ;1D6/2 ;1500;Implant_Circulation.png
-279;Implants;Système Circulatoire;;Toxin Binders;Anne Calvin;Nanoids conçus pour se lier aux toxines et poisons corporels. Ajoute +4 à tous les tests de sauvegarde (Save) contre les poisons ;1D6/2;400;Implant_Circulation.png
-280;Implants;Système Circulatoire;;Gills Implant;Militech;Permet de respirer de l'eau relativement propre pour une durée maximale de 4 heures ;2D6 ;500;Implant_Circulation.png
+273;Implants;Système Nerveux;;Chipware Socket (10 puces);Militech;Petite douille pour insérer jusqu'à 10 puces de compétence (APTR ou MRAM) ;2D6 ;500;Implant_Nerf.png
+274;Implants;Système Nerveux;;Adrenal Booster (ADS);Zetatech;Glande artificielle qui libère des hormones adrénalines sur commande. ajoutant +1 aux Réflexes (REF) ;2D6 ;500;Implant_Nerf.png
+275;Implants;Système Circulatoire;;Nanosurgeons (NSR);Arasaka / Si-fui Yan;Machines microscopiques injectées qui effectuent des réparations chirurgicales au niveau cellulaire. Double le taux de guérison normal ;1D6/2 ;6000;Implant_Circulation.png
+276;Implants;Système Circulatoire;;Muscle & Bone Lace (M&BL);Biotechnica;Nanoids qui enfilent des muscles synthétiques et enveloppent les os. Augmente la Puissance de +2 ;2D6 ;3000;Implant_Circulation.png
+277;Implants;Système Circulatoire;;Grafted Muscle (GM);Zetatech;Muscle cultivé en cuve greffé. Augmente la statistique Puissance jusqu'à 2 points (1000 eb par point) ;1D6 par point de PUISSANCE gagné;;Implant_Circulation.png
+278;Implants;Système Circulatoire;;Enhanced Antibodies (EA);DiscrétionNet;Anticorps sur mesure qui attaquent les toxines et les virus. Double le taux de guérison (en plus du taux normal) ;1D6/2 ;1500;Implant_Circulation.png
+279;Implants;Système Circulatoire;;Toxin Binders;Anne Calvin;Nanoids conçus pour se lier aux toxines et poisons corporels. Ajoute +4 à tous les tests de sauvegarde (Save) contre les poisons ;1D6/2;400;Implant_Circulation.png
+280;Implants;Système Circulatoire;;Gills Implant;Militech;Permet de respirer de l'eau relativement propre pour une durée maximale de 4 heures ;2D6 ;500;Implant_Circulation.png
 281;Implants;Système Circulatoire;;Independent Air Supply (IAS);Trauma Team;Organe artificiel stockant de l'oxygène. permettant à un personnage inactif de retenir sa respiration jusqu'à 25 minutes ;2D6 ;400;Implant_Circulation.png
-282;Implants;Système Circulatoire;;Biomonitor;Arasaka (R&D);Monté sous la peau de l'avant-bras. Donne un relevé constant du pouls. etc. Ajoute +2 aux tests Resist Torture/Drugs ;1D6/2 ;400;Implant_Circulation.png
-283;Implants;Système Circulatoire;;Nasal Filters (NF);Dai Lung;Filtres augmentant les Saves contre les gaz toxiques. fumées ou autres toxines respirables de +4 ;2D6 ;100;Implant_Circulation.png
+282;Implants;Système Circulatoire;;Biomonitor;Arasaka (R&D);Monté sous la peau de l'avant-bras. Donne un relevé constant du pouls. etc. Ajoute +2 aux tests Resist Torture/Drugs ;1D6/2 ;400;Implant_Circulation.png
+283;Implants;Système Circulatoire;;Nasal Filters (NF);Dai Lung;Filtres augmentant les Saves contre les gaz toxiques. fumées ou autres toxines respirables de +4 ;2D6 ;100;Implant_Circulation.png
 284;Implants;Système Circulatoire;;Contraceptive Implant (CI);Exotic Fashion;Implanté sous l'aisselle gauche. empêche la grossesse pendant 5 ans ;2D6 ;100;Implant_Circulation.png
