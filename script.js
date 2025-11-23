@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const checkoutBtn = document.getElementById('checkout-btn');
     const clearCartBtn = document.getElementById('clear-cart-btn');
     const navLinks = document.querySelectorAll('.nav-link');
+    const submenuDiv = document.getElementById('submenu');
 
     let products = []; // Pour stocker tous les produits chargés
     let cart = JSON.parse(localStorage.getItem('cart')) || {}; // Le panier
@@ -20,37 +21,88 @@ document.addEventListener('DOMContentLoaded', () => {
         toast.textContent = `>> SYSTEM: ${message}`;
         container.appendChild(toast);
 
-        // Supprimer l'élément après l'animation (3 secondes)
         setTimeout(() => {
             toast.remove();
         }, 3000);
     }
 
+    // --- Utilitaires ---
+    function sanitizeId(text) {
+        // Crée un ID propre (ex: "Armes - Fusil" -> "type-armes-fusil")
+        return 'type-' + text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    }
+
     // --- Gestion de la Navigation et des Vues ---
 
     function showView(viewId) {
-        // Cacher toutes les vues
         document.querySelectorAll('.view').forEach(view => {
             view.style.display = 'none'; 
         });
         
-        // Afficher la vue demandée
         const activeView = document.getElementById(viewId);
         if (activeView) {
             activeView.style.display = 'block'; 
             if (viewId === 'cart-view') {
-                renderCart(); // Rafraîchir le panier quand on l'affiche
+                renderCart();
             }
         }
 
-        // Mettre à jour l'état actif du menu
         navLinks.forEach(link => {
             link.classList.remove('active-link');
             if(link.dataset.view === viewId) {
                 link.classList.add('active-link');
             }
         });
+
+        updateSubmenu(viewId);
     }
+
+    // --- Gestion du Sous-menu Dynamique ---
+    function updateSubmenu(viewId) {
+        submenuDiv.innerHTML = ''; // Nettoyer le sous-menu
+
+        const catalogueName = viewId.replace('-view', '');
+        
+        const relevantProducts = products.filter(p => 
+            p.Catalogue.toLowerCase().replace(/\s+/g, '-').replace(/'/g, '-') === catalogueName
+        );
+
+        if (relevantProducts.length === 0) return;
+
+        // On récupère le vrai nom du catalogue (avec majuscules) depuis le premier produit
+        // Cela sert à reconstruire l'ID unique (ex: "Modules")
+        const currentCatalogueRaw = relevantProducts[0].Catalogue;
+
+        const types = [...new Set(relevantProducts.map(p => p.Type))].sort();
+
+        types.forEach(type => {
+            const btn = document.createElement('button');
+            btn.textContent = type;
+            btn.classList.add('submenu-btn');
+            
+            btn.onclick = () => {
+                // MODIFICATION 1 : On génère l'ID cible en incluant le Catalogue + le Type
+                // Cela évite le conflit entre "Archerie" (Armes) et "Archerie" (Modules)
+                const targetId = sanitizeId(currentCatalogueRaw + '-' + type);
+                
+                const targetElement = document.getElementById(targetId);
+                const container = document.getElementById(viewId); 
+
+                if (targetElement && container) {
+                    const topPos = targetElement.offsetTop - 20;
+
+                    container.scrollTo({
+                        top: topPos,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    console.warn("Element cible introuvable:", targetId);
+                }
+            };
+            submenuDiv.appendChild(btn);
+        });
+    }
+
 
     // --- Fonctions de gestion du Panier ---
 
@@ -74,11 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             localStorage.setItem('cart', JSON.stringify(cart));
             updateCartCount();
-            
-            // Notification visuelle
             showToast(`${product.Nom} AJOUTÉ AU PANIER`);
-        } else {
-            console.error(`Produit avec l'ID ${productId} non trouvé.`);
         }
     }
 
@@ -113,15 +161,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- NOUVELLE FONCTION : Génération de la facture ---
     function checkout() {
-        // 1. Vérifier si le panier est vide
         if (Object.keys(cart).length === 0) {
             showToast("ERREUR: PANIER VIDE");
             return;
         }
 
-        // 2. Construction du contenu texte (Format Ticket de caisse / Terminal)
         const date = new Date().toLocaleString('fr-FR');
         const separator = "=".repeat(60);
         const thinSeparator = "-".repeat(60);
@@ -133,22 +178,16 @@ document.addEventListener('DOMContentLoaded', () => {
         invoiceText += `ID TR : ${Math.random().toString(36).substr(2, 9).toUpperCase()}\n`;
         invoiceText += `${separator}\n\n`;
 
-        // En-têtes de colonnes (alignés avec padEnd)
         invoiceText += "ARTICLE".padEnd(35) + "QTE".padEnd(8) + "PRIX U.".padEnd(10) + "TOTAL".padStart(7) + "\n";
         invoiceText += `${thinSeparator}\n`;
 
-        // Boucle sur les articles
         Object.values(cart).forEach(item => {
             const lineTotal = item.Prix * item.quantity;
             grandTotal += lineTotal;
-
-            // Formatage des chaînes pour l'alignement
-            // On coupe le nom à 33 caractères pour éviter qu'il casse la ligne
             const name = item.Nom.substring(0, 33).padEnd(35);
             const qty = ("x" + item.quantity).padEnd(8);
             const unitPrice = (item.Prix.toFixed(0) + " E").padEnd(10);
             const totalLine = (lineTotal.toFixed(0) + " E").padStart(7);
-
             invoiceText += `${name}${qty}${unitPrice}${totalLine}\n`;
         });
 
@@ -159,7 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
         invoiceText += "RESTEZ EN SECURITE DANS LA ZONE DE COMBAT.\n";
         invoiceText += "\n>> END OF TRANSMISSION";
 
-        // 3. Création et téléchargement du fichier
         const blob = new Blob([invoiceText], { type: 'text/plain' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -168,11 +206,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(a);
         a.click();
         
-        // Nettoyage
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
 
-        // 4. Vider le panier après commande
         cart = {};
         localStorage.removeItem('cart');
         renderCart();
@@ -191,7 +227,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 cartItemDiv.classList.add('cart-item');
                 cartItemDiv.dataset.productId = item.id;
                 
-                // Gestion erreur image panier
                 const imgSrc = item.Image;
                 
                 cartItemDiv.innerHTML = `
@@ -266,7 +301,6 @@ document.addEventListener('DOMContentLoaded', () => {
             powerHtml = `<p class="product-power">${powerLabel}${product.Pouvoir}</p>`;
         }
 
-        // Création de l'image avec gestion d'erreur (fallback SVG)
         const img = document.createElement('img');
         img.src = product.Image;
         img.alt = product.Nom;
@@ -284,10 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p class="price color-yellow">${parseFloat(product.Prix).toFixed(0)} €</p>
             <button class="action-btn add-to-cart-btn color-red" data-product-id="${product.id}">Ajouter au Panier</button>
         `;
-
-        // Insérer l'image au début
         card.prepend(img);
-
         card.querySelector('.add-to-cart-btn').addEventListener('click', (e) => {
             addToCart(e.target.dataset.productId);
         });
@@ -311,6 +342,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const typeHeader = document.createElement('h3');
                 typeHeader.classList.add('type-title', 'color-green');
                 typeHeader.textContent = type;
+                
+                // MODIFICATION 2 : On assigne l'ID en incluant le Catalogue ET le Type
+                typeHeader.id = sanitizeId(catalogue + '-' + type);
+                
                 view.appendChild(typeHeader);
 
                 const productGrid = document.createElement('div');
@@ -324,15 +359,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Initialisation ---
-
     async function init() {
         products = await fetchCsvAndParse('produits.csv');
         if (products.length > 0) {
             renderCataloguePages();
         } else {
             document.querySelectorAll('.catalogue-view').forEach(view => {
-                view.innerHTML = `<p class="color-red">Erreur de chargement des produits. Vérifiez la console et assurez-vous de lancer via un serveur local.</p>`;
+                view.innerHTML = `<p class="color-red">Erreur de chargement des produits.</p>`;
             });
         }
         
@@ -343,7 +376,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Liaison de la nouvelle fonction checkout
         checkoutBtn.addEventListener('click', checkout);
         clearCartBtn.addEventListener('click', clearCart);
 

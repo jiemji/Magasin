@@ -4,31 +4,28 @@
     --color-amber: #FFB300;    /* Ambre principal */
     --color-amber-dim: #996B00; /* Ambre sombre pour les éléments secondaires */
     --color-amber-light: #FFD54F; /* Ambre clair pour le survol */
-    --header-height: 160px;
+    
+    /* Hauteur augmentée pour accueillir le sous-menu */
+    --header-height: 210px; 
 }
 
-/* --- SCROLLBAR PERSONNALISÉE (Style Cyberpunk) --- */
+/* --- SCROLLBAR PERSONNALISÉE --- */
 ::-webkit-scrollbar {
-    width: 8px; /* Largeur fine */
+    width: 8px;
     height: 8px;
 }
-
 ::-webkit-scrollbar-track {
     background: var(--color-bg);
     border-left: 1px solid var(--color-amber-dim);
 }
-
 ::-webkit-scrollbar-thumb {
     background-color: var(--color-amber-dim);
     border: 1px solid var(--color-bg);
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background-color: var(--color-amber);
     cursor: pointer;
 }
-
-/* Firefox */
 * {
     scrollbar-width: thin;
     scrollbar-color: var(--color-amber-dim) var(--color-bg);
@@ -77,9 +74,15 @@ header {
     height: var(--header-height);
     background-color: var(--color-bg);
     z-index: 1000;
-    text-align: center;
-    padding: 15px;
     border-bottom: 1px solid var(--color-amber-dim);
+    display: flex;
+    flex-direction: column;
+}
+
+.header-main {
+    padding: 15px;
+    text-align: center;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -119,6 +122,37 @@ nav a:hover, nav a.active-link {
     text-shadow: 0 0 8px rgba(255, 179, 0, 0.4);
 }
 
+/* --- SOUS-MENU --- */
+.submenu {
+    height: 40px;
+    background-color: rgba(255, 179, 0, 0.05);
+    border-top: 1px solid var(--color-amber-dim);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0 20px;
+}
+
+.submenu-btn {
+    background: none;
+    border: none;
+    color: var(--color-amber-dim);
+    font-family: 'Cousine', monospace;
+    font-size: 0.85em;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    transition: color 0.2s;
+}
+
+.submenu-btn:hover {
+    color: var(--color-amber-light);
+    text-decoration: underline;
+}
+
 /* --- ZONE DE CONTENU SCROLLABLE --- */
 main, section.view {
     max-width: 1600px;
@@ -127,6 +161,9 @@ main, section.view {
     padding: 20px;
     flex-grow: 1;
     overflow-y: auto;
+    
+    /* Permet aux calculs JS de position d'être précis */
+    position: relative;
 }
 
 .intro-text {
@@ -137,13 +174,12 @@ main, section.view {
     color: var(--color-amber);
 }
 
-/* --- PRODUITS (GRID & CARTE COMPACTE) --- */
+/* --- PRODUITS (GRID) --- */
 .product-grid {
     display: grid;
-    /* 240px min permet 5 colonnes sur un écran large (>1300px) */
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
     gap: 15px;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 60px;
 }
 
@@ -162,7 +198,7 @@ main, section.view {
 
 .product-card img {
     width: 100%;
-    height: 160px; /* Taille réduite */
+    height: 160px;
     object-fit: contain;
     margin-bottom: 10px;
     border: none;
@@ -182,12 +218,10 @@ main, section.view {
     border-bottom: 1px solid var(--color-amber-dim);
     padding-bottom: 4px;
     width: 100%;
-    
-    /* Correction : Retour à la ligne autorisé */
     white-space: normal; 
-    min-height: 2.4em; /* Réserve l'espace pour 2 lignes pour aligner les cartes */
+    min-height: 2.4em;
     display: flex;
-    align-items: flex-end; /* Aligne le texte en bas de la zone de titre */
+    align-items: flex-end;
 }
 
 .product-brand {
@@ -204,12 +238,9 @@ main, section.view {
 .product-description {
     font-size: 0.85em;
     line-height: 1.3;
-    
-    /* Hauteur fixe avec défilement pour éviter les cartes géantes */
     height: 70px; 
-    overflow-y: auto; /* Active la scrollbar personnalisée si texte trop long */
-    
-    flex-grow: 0; /* Ne s'étire pas */
+    overflow-y: auto;
+    flex-grow: 0;
     margin-bottom: 10px;
     text-align: left;
     opacity: 0.9;
@@ -239,7 +270,7 @@ main, section.view {
     font-weight: 700;
     margin-bottom: 10px;
     align-self: flex-end;
-    margin-top: auto; /* Pousse le prix vers le bas si espace libre */
+    margin-top: auto;
 }
 
 /* --- BOUTONS --- */
@@ -266,7 +297,7 @@ button:hover {
     border-width: 1px;
 }
 
-/* --- TITRES CATALOGUE --- */
+/* --- TITRES CATALOGUE & ANCRES --- */
 .catalogue-title {
     font-size: 2em;
     border-bottom: 1px solid var(--color-amber);
@@ -407,10 +438,15 @@ footer {
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
     :root {
-        --header-height: 180px;
+        --header-height: 220px; 
     }
     header h1 { font-size: 1.8em; }
     
+    .submenu {
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+
     .product-grid { 
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
     }

@@ -13,17 +13,21 @@
 </head>
 <body>
     <header>
-        <h1 class="color-amber">SoloMart 2000</h1>
-        <nav>
-            <ul>
-                <li><a href="#accueil-view" class="nav-link" data-view="accueil-view">Accueil</a></li>
-                <li><a href="#armes-view" class="nav-link" data-view="armes-view">Armes</a></li>
-                <li><a href="#modules-view" class="nav-link" data-view="modules-view">Modules</a></li>
-                <li><a href="#vetements-view" class="nav-link" data-view="vetements-view">Vêtements</a></li>
-                <li><a href="#implants-view" class="nav-link" data-view="implants-view">Implants</a></li>
-                <li><a href="#cart-view" class="nav-link" data-view="cart-view">Panier (<span id="cart-count">0</span>)</a></li>
-            </ul>
-        </nav>
+        <div class="header-main">
+            <h1 class="color-amber">SoloMart 2000</h1>
+            <nav>
+                <ul>
+                    <li><a href="#accueil-view" class="nav-link" data-view="accueil-view">Accueil</a></li>
+                    <li><a href="#armes-view" class="nav-link" data-view="armes-view">Armes</a></li>
+                    <li><a href="#modules-view" class="nav-link" data-view="modules-view">Modules</a></li>
+                    <li><a href="#vetements-view" class="nav-link" data-view="vetements-view">Vêtements</a></li>
+                    <li><a href="#implants-view" class="nav-link" data-view="implants-view">Implants</a></li>
+                    <li><a href="#cart-view" class="nav-link" data-view="cart-view">Panier (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- NOUVEAU : Sous-menu dynamique -->
+        <div id="submenu" class="submenu"></div>
     </header>
 
     <!-- Vue de l'accueil -->
