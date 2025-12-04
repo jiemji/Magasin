@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Utilitaires ---
     function sanitizeId(text) {
-        // Crée un ID propre (ex: "Armes - Fusil" -> "type-armes-fusil")
         return 'type-' + text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
     }
 
@@ -69,10 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (relevantProducts.length === 0) return;
 
-        // On récupère le vrai nom du catalogue (avec majuscules) depuis le premier produit
-        // Cela sert à reconstruire l'ID unique (ex: "Modules")
         const currentCatalogueRaw = relevantProducts[0].Catalogue;
-
         const types = [...new Set(relevantProducts.map(p => p.Type))].sort();
 
         types.forEach(type => {
@@ -81,22 +77,16 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.add('submenu-btn');
             
             btn.onclick = () => {
-                // MODIFICATION 1 : On génère l'ID cible en incluant le Catalogue + le Type
-                // Cela évite le conflit entre "Archerie" (Armes) et "Archerie" (Modules)
                 const targetId = sanitizeId(currentCatalogueRaw + '-' + type);
-                
                 const targetElement = document.getElementById(targetId);
                 const container = document.getElementById(viewId); 
 
                 if (targetElement && container) {
                     const topPos = targetElement.offsetTop - 20;
-
                     container.scrollTo({
                         top: topPos,
                         behavior: 'smooth'
                     });
-                } else {
-                    console.warn("Element cible introuvable:", targetId);
                 }
             };
             submenuDiv.appendChild(btn);
@@ -117,7 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function addToCart(productId) {
-        const product = products.find(p => p.id === productId);
+        const product = products.find(p => p.id === String(productId));
+        
         if (product) {
             if (cart[productId]) {
                 cart[productId].quantity++;
@@ -161,43 +152,66 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // --- MODIFICATION : Fonction Checkout Mise à jour ---
     function checkout() {
         if (Object.keys(cart).length === 0) {
             showToast("ERREUR: PANIER VIDE");
             return;
         }
 
+        // 1. Préparation et Tri des articles
+        // On convertit l'objet cart en tableau pour pouvoir le trier
+        const items = Object.values(cart).sort((a, b) => {
+            // Tri principal : Par Catalogue (Alphabétique)
+            if (a.Catalogue < b.Catalogue) return -1;
+            if (a.Catalogue > b.Catalogue) return 1;
+            
+            // Tri secondaire : Par Type (Alphabétique)
+            if (a.Type < b.Type) return -1;
+            if (a.Type > b.Type) return 1;
+            
+            return 0;
+        });
+
+        // 2. Construction du fichier texte
         const date = new Date().toLocaleString('fr-FR');
-        const separator = "=".repeat(60);
-        const thinSeparator = "-".repeat(60);
+        // Séparateur plus large pour accueillir les nouvelles colonnes
+        const separator = "=".repeat(100); 
+        const thinSeparator = "-".repeat(100);
         let grandTotal = 0;
 
-        let invoiceText = `SOLOMART 2000 -- RECU DE TRANSACTION\n`;
+        let invoiceText = `SOLOMART 2000 -- MANIFESTE DE COMMANDE\n`;
         invoiceText += `${separator}\n`;
         invoiceText += `DATE  : ${date}\n`;
         invoiceText += `ID TR : ${Math.random().toString(36).substr(2, 9).toUpperCase()}\n`;
         invoiceText += `${separator}\n\n`;
 
-        invoiceText += "ARTICLE".padEnd(35) + "QTE".padEnd(8) + "PRIX U.".padEnd(10) + "TOTAL".padStart(7) + "\n";
+        // En-têtes de colonnes ajustés
+        invoiceText += "CATALOGUE".padEnd(12) + "TYPE".padEnd(18) + "ARTICLE".padEnd(32) + "QTE".padEnd(6) + "PRIX U.".padEnd(12) + "TOTAL".padStart(10) + "\n";
         invoiceText += `${thinSeparator}\n`;
 
-        Object.values(cart).forEach(item => {
+        items.forEach(item => {
             const lineTotal = item.Prix * item.quantity;
             grandTotal += lineTotal;
-            const name = item.Nom.substring(0, 33).padEnd(35);
-            const qty = ("x" + item.quantity).padEnd(8);
-            const unitPrice = (item.Prix.toFixed(0) + " E").padEnd(10);
-            const totalLine = (lineTotal.toFixed(0) + " E").padStart(7);
-            invoiceText += `${name}${qty}${unitPrice}${totalLine}\n`;
+
+            // Formatage des données avec troncature si nécessaire pour ne pas casser l'alignement
+            const cat = item.Catalogue.substring(0, 11).padEnd(12);
+            const type = item.Type.substring(0, 17).padEnd(18);
+            const name = item.Nom.substring(0, 30).padEnd(32);
+            const qty = ("x" + item.quantity).padEnd(6);
+            const unitPrice = (item.Prix.toFixed(0) + " E").padEnd(12);
+            const totalLine = (lineTotal.toFixed(0) + " E").padStart(10);
+
+            invoiceText += `${cat}${type}${name}${qty}${unitPrice}${totalLine}\n`;
         });
 
         invoiceText += `${thinSeparator}\n`;
-        invoiceText += `TOTAL A PAYER:`.padEnd(53) + (grandTotal.toFixed(0) + " E").padStart(7) + "\n";
+        invoiceText += `TOTAL A PAYER:`.padEnd(80) + (grandTotal.toFixed(0) + " E").padStart(10) + "\n";
         invoiceText += `${separator}\n\n`;
         invoiceText += "MERCI DE VOTRE VISITE, CHOOM.\n";
-        invoiceText += "RESTEZ EN SECURITE DANS LA ZONE DE COMBAT.\n";
-        invoiceText += "\n>> END OF TRANSMISSION";
+        invoiceText += "TRANSMISSION TERMINEE.\n";
 
+        // 3. Téléchargement
         const blob = new Blob([invoiceText], { type: 'text/plain' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -209,10 +223,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
 
-        cart = {};
-        localStorage.removeItem('cart');
-        renderCart();
-        showToast("COMMANDE TRANSMISE. TÉLÉCHARGEMENT...");
+        // 4. Feedback (SANS vider le panier)
+        showToast("FACTURE GÉNÉRÉE AVEC SUCCÈS");
     }
 
     function renderCart() {
@@ -272,7 +284,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             for (let i = 1; i < lines.length; i++) {
                 const values = lines[i].split(';');
+                if (values.length < headers.length) continue;
+
                 let item = {};
+                item.id = String(i); // Génération d'ID
+
                 headers.forEach((header, index) => {
                     const value = values[index] ? values[index].trim().replace(/"/g, '') : '';
                     item[header] = header === 'Prix' ? parseFloat(value) : value;
@@ -296,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (product.Catalogue === 'Armes') {
                 powerLabel = 'Dégâts : ';
             } else if (product.Catalogue === 'Implants') {
-                powerLabel = "Perte d'humanité : ";
+                powerLabel = "Humanité : ";
             }
             powerHtml = `<p class="product-power">${powerLabel}${product.Pouvoir}</p>`;
         }
@@ -343,7 +359,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 typeHeader.classList.add('type-title', 'color-green');
                 typeHeader.textContent = type;
                 
-                // MODIFICATION 2 : On assigne l'ID en incluant le Catalogue ET le Type
                 typeHeader.id = sanitizeId(catalogue + '-' + type);
                 
                 view.appendChild(typeHeader);
